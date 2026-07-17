@@ -25,7 +25,12 @@ export type TemplateCategory =
   | "solopreneur"
   | "content"
   | "crm"
-  | "knowledge";
+  | "knowledge"
+  | "project"
+  | "finance"
+  | "saas"
+  | "student"
+  | "habits";
 
 export interface CategoryInfo {
   id: TemplateCategory;
@@ -33,5 +38,3 @@ export interface CategoryInfo {
   slug: string;
   description: string;
 }
-
-

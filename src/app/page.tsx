@@ -2,7 +2,7 @@ import { templates } from "@/data/templates";
 import { TemplateGrid } from "@/components/templates/TemplateGrid";
 import { categories } from "@/data/templates";
 import { Badge } from "@/components/ui/Badge";
-import { Bot, Rocket, CalendarDays, Users, Brain } from "lucide-react";
+import { Bot, Rocket, CalendarDays, Users, Brain, FolderKanban, DollarSign, BarChart3, GraduationCap, Target } from "lucide-react";
 
 const categoryIconMap: Record<string, React.ReactNode> = {
   "ai-startup": <Bot className="size-5" />,
@@ -10,6 +10,11 @@ const categoryIconMap: Record<string, React.ReactNode> = {
   content: <CalendarDays className="size-5" />,
   crm: <Users className="size-5" />,
   knowledge: <Brain className="size-5" />,
+  project: <FolderKanban className="size-5" />,
+  finance: <DollarSign className="size-5" />,
+  saas: <BarChart3 className="size-5" />,
+  student: <GraduationCap className="size-5" />,
+  habits: <Target className="size-5" />,
 };
 
 const categoryGradientMap: Record<string, string> = {
@@ -18,6 +23,11 @@ const categoryGradientMap: Record<string, string> = {
   content: "from-emerald-500 to-teal-600",
   crm: "from-rose-500 to-pink-600",
   knowledge: "from-sky-500 to-blue-600",
+  project: "from-cyan-500 to-blue-600",
+  finance: "from-green-500 to-emerald-600",
+  saas: "from-purple-500 to-fuchsia-600",
+  student: "from-yellow-500 to-orange-600",
+  habits: "from-red-500 to-rose-600",
 };
 
 export default function HomePage() {
@@ -28,7 +38,7 @@ export default function HomePage() {
         <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6 sm:py-28 lg:px-8">
           <div className="mx-auto max-w-2xl text-center">
             <Badge variant="default" className="mb-4">
-              🎉 5 premium templates available
+              🎉 10 premium templates available
             </Badge>
             <h1 className="mb-6 text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl lg:text-6xl">
               Build Faster with{" "}
