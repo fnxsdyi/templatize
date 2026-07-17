@@ -5,13 +5,46 @@ import { categories } from "@/data/templates";
 import { Badge } from "@/components/ui/Badge";
 import { StarRating } from "@/components/ui/StarRating";
 import { PricingCard } from "@/components/ui/PricingCard";
-import { Button } from "@/components/ui/Button";
-import { CheckCircle, Clock, User, Calendar } from "lucide-react";
+import {
+  CheckCircle,
+  Clock,
+  User,
+  Calendar,
+  Bot,
+  Rocket,
+  CalendarDays,
+  Users,
+  Brain,
+} from "lucide-react";
 import Link from "next/link";
 
 interface Props {
   params: Promise<{ slug: string }>;
 }
+
+const iconMap: Record<string, React.ReactNode> = {
+  "ai-startup": <Bot className="size-8" />,
+  solopreneur: <Rocket className="size-8" />,
+  content: <CalendarDays className="size-8" />,
+  crm: <Users className="size-8" />,
+  knowledge: <Brain className="size-8" />,
+};
+
+const gradientMap: Record<string, string> = {
+  "ai-startup": "from-violet-500 to-indigo-600",
+  solopreneur: "from-amber-500 to-orange-600",
+  content: "from-emerald-500 to-teal-600",
+  crm: "from-rose-500 to-pink-600",
+  knowledge: "from-sky-500 to-blue-600",
+};
+
+const bgMap: Record<string, string> = {
+  "ai-startup": "from-violet-50 to-indigo-100",
+  solopreneur: "from-amber-50 to-orange-100",
+  content: "from-emerald-50 to-teal-100",
+  crm: "from-rose-50 to-pink-100",
+  knowledge: "from-sky-50 to-blue-100",
+};
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
@@ -37,6 +70,9 @@ export default async function TemplateDetailPage({ params }: Props) {
   }
 
   const category = categories.find((c) => c.id === template.category);
+  const icon = iconMap[template.category] ?? <Rocket className="size-8" />;
+  const gradient = gradientMap[template.category] ?? "from-indigo-500 to-purple-600";
+  const bg = bgMap[template.category] ?? "from-indigo-50 to-purple-100";
 
   return (
     <div>
@@ -68,18 +104,27 @@ export default async function TemplateDetailPage({ params }: Props) {
         <div className="grid gap-12 lg:grid-cols-2">
           {/* Left: Preview + Info */}
           <div>
-            {/* Preview image placeholder */}
-            <div className="mb-8 aspect-[16/10] overflow-hidden rounded-2xl bg-gradient-to-br from-indigo-50 via-white to-purple-50 shadow-sm">
-              <div className="flex h-full items-center justify-center">
+            {/* Preview image area */}
+            <div
+              className={`mb-8 aspect-[16/10] overflow-hidden rounded-2xl bg-gradient-to-br ${bg} shadow-sm`}
+            >
+              <div className="absolute inset-0 opacity-30">
+                <div className="absolute -right-6 -top-6 size-32 rounded-full bg-white/60 blur-2xl" />
+                <div className="absolute -bottom-8 -left-8 size-40 rounded-full bg-white/40 blur-3xl" />
+              </div>
+              <div className="relative flex h-full flex-col items-center justify-center gap-4">
+                <div
+                  className={`flex size-20 items-center justify-center rounded-2xl bg-gradient-to-br ${gradient} text-white shadow-xl shadow-current/25`}
+                >
+                  {icon}
+                </div>
                 <div className="text-center">
-                  <div className="mx-auto mb-3 flex size-20 items-center justify-center rounded-2xl bg-indigo-100 text-4xl">
-                    {template.category === "ai-startup" && "🤖"}
-                    {template.category === "solopreneur" && "🚀"}
-                    {template.category === "content" && "📅"}
-                    {template.category === "crm" && "🤝"}
-                    {template.category === "knowledge" && "🧠"}
-                  </div>
-                  <p className="text-sm text-gray-400">Preview image</p>
+                  <h3 className="text-lg font-semibold text-gray-800">
+                    {template.title}
+                  </h3>
+                  <p className="mt-1 text-sm text-gray-400">
+                    Notion Template Preview
+                  </p>
                 </div>
               </div>
             </div>
@@ -95,13 +140,11 @@ export default async function TemplateDetailPage({ params }: Props) {
                       : "border border-gray-200 bg-gray-50"
                   } flex items-center justify-center`}
                 >
-                  <span className="text-lg opacity-40">
-                    {template.category === "ai-startup" && "🤖"}
-                    {template.category === "solopreneur" && "🚀"}
-                    {template.category === "content" && "📅"}
-                    {template.category === "crm" && "🤝"}
-                    {template.category === "knowledge" && "🧠"}
-                  </span>
+                  <div
+                    className={`flex size-8 items-center justify-center rounded-lg bg-gradient-to-br ${gradient} text-white shadow-sm`}
+                  >
+                    {iconMap[template.category]}
+                  </div>
                 </div>
               ))}
             </div>
@@ -137,7 +180,9 @@ export default async function TemplateDetailPage({ params }: Props) {
           <div className="lg:sticky lg:top-24 lg:self-start">
             <div className="mb-4 flex items-center gap-2">
               {category && <Badge variant="category">{category.label}</Badge>}
-              {template.originalPrice && <Badge variant="sale">LIMITED OFFER</Badge>}
+              {template.originalPrice && (
+                <Badge variant="sale">LIMITED OFFER</Badge>
+              )}
             </div>
 
             <h1 className="mb-2 text-3xl font-bold tracking-tight text-gray-900">

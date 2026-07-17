@@ -2,6 +2,23 @@ import { templates } from "@/data/templates";
 import { TemplateGrid } from "@/components/templates/TemplateGrid";
 import { categories } from "@/data/templates";
 import { Badge } from "@/components/ui/Badge";
+import { Bot, Rocket, CalendarDays, Users, Brain } from "lucide-react";
+
+const categoryIconMap: Record<string, React.ReactNode> = {
+  "ai-startup": <Bot className="size-5" />,
+  solopreneur: <Rocket className="size-5" />,
+  content: <CalendarDays className="size-5" />,
+  crm: <Users className="size-5" />,
+  knowledge: <Brain className="size-5" />,
+};
+
+const categoryGradientMap: Record<string, string> = {
+  "ai-startup": "from-violet-500 to-indigo-600",
+  solopreneur: "from-amber-500 to-orange-600",
+  content: "from-emerald-500 to-teal-600",
+  crm: "from-rose-500 to-pink-600",
+  knowledge: "from-sky-500 to-blue-600",
+};
 
 export default function HomePage() {
   return (
@@ -42,12 +59,10 @@ export default function HomePage() {
                 key={cat.id}
                 className="rounded-xl border border-gray-100 bg-white p-6 text-center shadow-sm transition-all hover:shadow-md hover:-translate-y-0.5"
               >
-                <div className="mx-auto mb-3 flex size-12 items-center justify-center rounded-xl bg-indigo-50 text-xl">
-                  {cat.id === "ai-startup" && "🤖"}
-                  {cat.id === "solopreneur" && "🚀"}
-                  {cat.id === "content" && "📅"}
-                  {cat.id === "crm" && "🤝"}
-                  {cat.id === "knowledge" && "🧠"}
+                <div
+                  className={`mx-auto mb-3 flex size-12 items-center justify-center rounded-xl bg-gradient-to-br ${categoryGradientMap[cat.id] ?? "from-indigo-500 to-purple-600"} text-white`}
+                >
+                  {categoryIconMap[cat.id]}
                 </div>
                 <h3 className="mb-1 text-sm font-semibold text-gray-900">
                   {cat.label}
@@ -62,9 +77,12 @@ export default function HomePage() {
       {/* Template Grid */}
       <section className="bg-white py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <h2 className="mb-2 text-2xl font-bold text-gray-900">All Templates</h2>
+          <h2 className="mb-2 text-2xl font-bold text-gray-900">
+            All Templates
+          </h2>
           <p className="mb-10 text-gray-500">
-            Choose from {templates.length} premium templates to jumpstart your workflow.
+            Choose from {templates.length} premium templates to jumpstart your
+            workflow.
           </p>
           <TemplateGrid templates={templates} />
         </div>
