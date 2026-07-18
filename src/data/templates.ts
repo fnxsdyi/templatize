@@ -248,7 +248,7 @@ export const templates: Template[] = [
       "Sprint Retrospective Template",
     ],
     previewImages: ["/images/project-1.jpg", "/images/project-2.jpg", "/images/project-3.jpg"],
-    gumroadUrl: "https://shoujiang.gumroad.com/l/templatize",
+    gumroadUrl: "https://shoujiang.gumroad.com/l/bzgzfl",
     notionUrl: "https://valley-watchmaker-6f6.notion.site/Project-OS-3a15beac7ccd80309bffc8907108dcb0?source=copy_link",
     whatsIncluded: [
       "1 Notion Template (duplicate & use instantly)",
@@ -282,7 +282,7 @@ export const templates: Template[] = [
       "Savings Goal Tracker",
     ],
     previewImages: ["/images/finance-1.jpg", "/images/finance-2.jpg", "/images/finance-3.jpg"],
-    gumroadUrl: "https://shoujiang.gumroad.com/l/templatize",
+    gumroadUrl: "https://shoujiang.gumroad.com/l/wnxovr",
     notionUrl: "https://valley-watchmaker-6f6.notion.site/Finance-Tracker-Pro-3a15beac7ccd8079a498e4fe952df01b?source=copy_link",
     whatsIncluded: [
       "1 Notion Template (duplicate & use instantly)",
@@ -316,7 +316,7 @@ export const templates: Template[] = [
       "Stripe CSV Import Template",
     ],
     previewImages: ["/images/saas-1.jpg", "/images/saas-2.jpg", "/images/saas-3.jpg"],
-    gumroadUrl: "https://shoujiang.gumroad.com/l/templatize",
+    gumroadUrl: "https://shoujiang.gumroad.com/l/ohjjddu",
     notionUrl: "https://valley-watchmaker-6f6.notion.site/SaaS-Metrics-Dashboard-3a15beac7ccd80c18835d4bcb1da7c76?source=copy_link",
     whatsIncluded: [
       "1 Notion Template (duplicate & use instantly)",
@@ -350,7 +350,7 @@ export const templates: Template[] = [
       "Scholarship & Internship Tracker",
     ],
     previewImages: ["/images/student-1.jpg", "/images/student-2.jpg", "/images/student-3.jpg"],
-    gumroadUrl: "https://shoujiang.gumroad.com/l/templatize",
+    gumroadUrl: "https://shoujiang.gumroad.com/l/zauxjc",
     notionUrl: "https://valley-watchmaker-6f6.notion.site/Student-Hub-3a15beac7ccd8066b0c0c119d890f0e8?source=copy_link",
     whatsIncluded: [
       "1 Notion Template (duplicate & use instantly)",
@@ -384,7 +384,7 @@ export const templates: Template[] = [
       "Progress Photo Tracker",
     ],
     previewImages: ["/images/habits-1.jpg", "/images/habits-2.jpg", "/images/habits-3.jpg"],
-    gumroadUrl: "https://shoujiang.gumroad.com/l/templatize",
+    gumroadUrl: "https://shoujiang.gumroad.com/l/mmoeeh",
     notionUrl: "https://valley-watchmaker-6f6.notion.site/Habit-Goal-Tracker-3a15beac7ccd8027a9b2f423b21a7366?source=copy_link",
     whatsIncluded: [
       "1 Notion Template (duplicate & use instantly)",
