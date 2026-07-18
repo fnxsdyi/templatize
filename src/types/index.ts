@@ -11,6 +11,7 @@ export interface Template {
   features: string[];
   previewImages: string[];
   gumroadUrl: string;
+  notionUrl?: string;
   whatsIncluded: string[];
   rating: number;
   reviewCount: number;
