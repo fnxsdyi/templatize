@@ -119,7 +119,7 @@ export const templates: Template[] = [
       "User Acquisition Strategy Playbook",
       "Competitor Analysis Template",
     ],
-    previewImages: ["/images/ai-kit-1.jpg", "/images/ai-kit-2.jpg", "/images/ai-kit-3.jpg"],
+    previewImages: ["/images/ai-startup-kit.png"],
     gumroadUrl: "https://shoujiang.gumroad.com/l/smrreb",
     notionUrl: "https://app.notion.com/p/AI-Startup-Kit-3a25beac7ccd80d8a9d9e4c48fea0895?source=copy_link",
     whatsIncluded: [
@@ -151,7 +151,7 @@ export const templates: Template[] = [
       "Task Automation Workflows",
       "Weekly Report Auto-Generator",
     ],
-    previewImages: ["/images/solo-1.jpg", "/images/solo-2.jpg", "/images/solo-3.jpg"],
+    previewImages: ["/images/solopreneur-os.png"],
     gumroadUrl: "https://shoujiang.gumroad.com/l/flbkiw",
     notionUrl: "https://valley-watchmaker-6f6.notion.site/Solopreneur-OS-3a15beac7ccd802fa000e8c1b3a7aafa?source=copy_link",
     whatsIncluded: [
@@ -183,7 +183,7 @@ export const templates: Template[] = [
       "Batch Content Production Checklist",
       "Cross-Platform Publishing Checklist",
     ],
-    previewImages: ["/images/content-1.jpg", "/images/content-2.jpg", "/images/content-3.jpg"],
+    previewImages: ["/images/content-calendar.png"],
     gumroadUrl: "https://shoujiang.gumroad.com/l/ysajyd",
     notionUrl: "https://valley-watchmaker-6f6.notion.site/Content-Creator-Calendar-3a15beac7ccd80209abdefbfbd3b74ed?source=copy_link",
     whatsIncluded: [
@@ -216,7 +216,7 @@ export const templates: Template[] = [
       "Invoice Auto-Generator",
       "Client Satisfaction Survey",
     ],
-    previewImages: ["/images/crm-1.jpg", "/images/crm-2.jpg", "/images/crm-3.jpg"],
+    previewImages: ["/images/client-crm.png"],
     gumroadUrl: "https://shoujiang.gumroad.com/l/rbjnxp",
     notionUrl: "https://valley-watchmaker-6f6.notion.site/Client-CRM-3a15beac7ccd8071b4d7d80dfc34579f?source=copy_link",
     whatsIncluded: [
@@ -249,7 +249,7 @@ export const templates: Template[] = [
       "Knowledge Output Templates",
       "Weekly & Monthly Review System",
     ],
-    previewImages: ["/images/knowledge-1.jpg", "/images/knowledge-2.jpg", "/images/knowledge-3.jpg"],
+    previewImages: ["/images/personal-knowledge-base.png"],
     gumroadUrl: "https://shoujiang.gumroad.com/l/zrerc",
     notionUrl: "https://valley-watchmaker-6f6.notion.site/Personal-Knowledge-Base-3a15beac7ccd80d785a2fd7bb45de51a?source=copy_link",
     whatsIncluded: [

@@ -129,46 +129,56 @@ export default async function TemplateDetailPage({ params }: Props) {
           {/* Left: Preview + Info */}
           <div>
             {/* Preview image area */}
-            <div
-              className={`mb-8 aspect-[16/10] overflow-hidden rounded-2xl bg-gradient-to-br ${bg} shadow-sm`}
-            >
-              <div className="absolute inset-0 opacity-30">
-                <div className="absolute -right-6 -top-6 size-32 rounded-full bg-white/60 blur-2xl" />
-                <div className="absolute -bottom-8 -left-8 size-40 rounded-full bg-white/40 blur-3xl" />
+            {template.previewImages[0] ? (
+              <div className="mb-8 aspect-[16/10] overflow-hidden rounded-2xl bg-gray-100 shadow-sm">
+                <img
+                  src={template.previewImages[0]}
+                  alt={`${template.title} preview`}
+                  className="size-full object-cover"
+                />
               </div>
-              <div className="relative flex h-full flex-col items-center justify-center gap-4">
-                <div
-                  className={`flex size-20 items-center justify-center rounded-2xl bg-gradient-to-br ${gradient} text-white shadow-xl shadow-current/25`}
-                >
-                  {icon}
+            ) : (
+              <div
+                className={`relative mb-8 aspect-[16/10] overflow-hidden rounded-2xl bg-gradient-to-br ${bg} shadow-sm`}
+              >
+                <div className="absolute inset-0 opacity-30">
+                  <div className="absolute -right-6 -top-6 size-32 rounded-full bg-white/60 blur-2xl" />
+                  <div className="absolute -bottom-8 -left-8 size-40 rounded-full bg-white/40 blur-3xl" />
                 </div>
-                <div className="text-center">
-                  <h3 className="text-lg font-semibold text-gray-800">
-                    {template.title}
-                  </h3>
-                  <p className="mt-1 text-sm text-gray-400">
-                    Notion Template Preview
-                  </p>
+                <div className="relative flex h-full flex-col items-center justify-center gap-4">
+                  <div
+                    className={`flex size-20 items-center justify-center rounded-2xl bg-gradient-to-br ${gradient} text-white shadow-xl shadow-current/25`}
+                  >
+                    {icon}
+                  </div>
+                  <div className="text-center">
+                    <h3 className="text-lg font-semibold text-gray-800">
+                      {template.title}
+                    </h3>
+                    <p className="mt-1 text-sm text-gray-400">
+                      Notion Template Preview
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
+            )}
 
             {/* Preview thumbnails */}
             <div className="mb-8 flex gap-3">
-              {template.previewImages.map((_, i) => (
+              {template.previewImages.map((src, i) => (
                 <div
                   key={i}
-                  className={`aspect-[16/10] flex-1 rounded-lg ${
+                  className={`aspect-[16/10] flex-1 overflow-hidden rounded-lg ${
                     i === 0
-                      ? "border-2 border-indigo-400 bg-indigo-50"
-                      : "border border-gray-200 bg-gray-50"
-                  } flex items-center justify-center`}
+                      ? "border-2 border-indigo-400"
+                      : "border border-gray-200"
+                  }`}
                 >
-                  <div
-                    className={`flex size-8 items-center justify-center rounded-lg bg-gradient-to-br ${gradient} text-white shadow-sm`}
-                  >
-                    {iconMap[template.category]}
-                  </div>
+                  <img
+                    src={src}
+                    alt={`${template.title} preview ${i + 1}`}
+                    className="size-full object-cover"
+                  />
                 </div>
               ))}
             </div>
