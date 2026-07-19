@@ -126,10 +126,10 @@ export default function TermsPage() {
           <p>
             Questions? Email us at{" "}
             <a
-              href="mailto:hello@templatize.store"
+              href="mailto:hello@kaki.llc"
               className="text-indigo-600 hover:underline"
             >
-              hello@templatize.store
+              hello@kaki.llc
             </a>{" "}
             or reach us through our Gumroad store (shoujiang.gumroad.com).
           </p>

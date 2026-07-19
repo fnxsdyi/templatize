@@ -97,10 +97,10 @@ export default function PrivacyPage() {
             example under the GDPR or CCPA). To exercise these rights with us,
             or if you have any privacy question, contact us at{" "}
             <a
-              href="mailto:hello@templatize.store"
+              href="mailto:hello@kaki.llc"
               className="text-indigo-600 hover:underline"
             >
-              hello@templatize.store
+              hello@kaki.llc
             </a>
             . For data held by Gumroad or Notion, please contact those
             providers directly.
@@ -121,10 +121,10 @@ export default function PrivacyPage() {
           <p>
             Questions? Email us at{" "}
             <a
-              href="mailto:hello@templatize.store"
+              href="mailto:hello@kaki.llc"
               className="text-indigo-600 hover:underline"
             >
-              hello@templatize.store
+              hello@kaki.llc
             </a>{" "}
             or reach us through our Gumroad store (shoujiang.gumroad.com).
           </p>
