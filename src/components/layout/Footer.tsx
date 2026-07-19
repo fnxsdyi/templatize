@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export function Footer() {
   return (
     <footer className="border-t border-gray-100 bg-gray-50">
@@ -9,9 +11,17 @@ export function Footer() {
             </div>
             <span className="text-sm font-medium text-gray-600">Templatize</span>
           </div>
-          <p className="text-sm text-gray-400">
-            © {new Date().getFullYear()} Templatize. All rights reserved.
-          </p>
+          <div className="flex items-center gap-6">
+            <Link
+              href="/guide"
+              className="text-sm text-gray-400 transition-colors hover:text-gray-700"
+            >
+              How to Use Guide
+            </Link>
+            <p className="text-sm text-gray-400">
+              © {new Date().getFullYear()} Templatize. All rights reserved.
+            </p>
+          </div>
         </div>
       </div>
     </footer>

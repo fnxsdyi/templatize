@@ -20,6 +20,7 @@ import {
   BarChart3,
   GraduationCap,
   Target,
+  BookOpen,
 } from "lucide-react";
 import Link from "next/link";
 
@@ -38,6 +39,7 @@ const iconMap: Record<string, React.ReactNode> = {
   saas: <BarChart3 className="size-8" />,
   student: <GraduationCap className="size-8" />,
   habits: <Target className="size-8" />,
+  guide: <BookOpen className="size-8" />,
 };
 
 const gradientMap: Record<string, string> = {
@@ -51,6 +53,7 @@ const gradientMap: Record<string, string> = {
   saas: "from-purple-500 to-fuchsia-600",
   student: "from-yellow-500 to-orange-600",
   habits: "from-red-500 to-rose-600",
+  guide: "from-teal-500 to-cyan-600",
 };
 
 const bgMap: Record<string, string> = {
@@ -64,6 +67,7 @@ const bgMap: Record<string, string> = {
   saas: "from-purple-50 to-fuchsia-100",
   student: "from-yellow-50 to-orange-100",
   habits: "from-red-50 to-rose-100",
+  guide: "from-teal-50 to-cyan-100",
 };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -264,7 +268,7 @@ export default async function TemplateDetailPage({ params }: Props) {
                   rel="noopener noreferrer"
                   className="flex w-full items-center justify-center rounded-lg bg-indigo-600 px-5 py-3 text-sm font-medium text-white shadow-sm transition-all hover:bg-indigo-700"
                 >
-                  Buy Now — ${template.price}
+                  {template.price === 0 ? "Get It Free" : `Buy Now — $${template.price}`}
                 </a>
               }
               className="border-indigo-100"

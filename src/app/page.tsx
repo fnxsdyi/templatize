@@ -2,7 +2,7 @@ import { templates } from "@/data/templates";
 import { TemplateGrid } from "@/components/templates/TemplateGrid";
 import { categories } from "@/data/templates";
 import { Badge } from "@/components/ui/Badge";
-import { Bot, Rocket, CalendarDays, Users, Brain, FolderKanban, DollarSign, BarChart3, GraduationCap, Target } from "lucide-react";
+import { Bot, Rocket, CalendarDays, Users, Brain, FolderKanban, DollarSign, BarChart3, GraduationCap, Target, BookOpen } from "lucide-react";
 
 const categoryIconMap: Record<string, React.ReactNode> = {
   "ai-startup": <Bot className="size-5" />,
@@ -15,6 +15,7 @@ const categoryIconMap: Record<string, React.ReactNode> = {
   saas: <BarChart3 className="size-5" />,
   student: <GraduationCap className="size-5" />,
   habits: <Target className="size-5" />,
+  guide: <BookOpen className="size-5" />,
 };
 
 const categoryGradientMap: Record<string, string> = {
@@ -28,6 +29,7 @@ const categoryGradientMap: Record<string, string> = {
   saas: "from-purple-500 to-fuchsia-600",
   student: "from-yellow-500 to-orange-600",
   habits: "from-red-500 to-rose-600",
+  guide: "from-teal-500 to-cyan-600",
 };
 
 export default function HomePage() {
@@ -38,7 +40,7 @@ export default function HomePage() {
         <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6 sm:py-28 lg:px-8">
           <div className="mx-auto max-w-2xl text-center">
             <Badge variant="default" className="mb-4">
-              🎉 10 premium templates available
+              🎉 10 templates + 1 free guide
             </Badge>
             <h1 className="mb-6 text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl lg:text-6xl">
               Build Faster with{" "}
@@ -90,10 +92,10 @@ export default function HomePage() {
           <h2 className="mb-2 text-2xl font-bold text-gray-900">
             All Templates
           </h2>
-          <p className="mb-10 text-gray-500">
-            Choose from {templates.length} premium templates to jumpstart your
-            workflow.
-          </p>
+            <p className="mb-10 text-gray-500">
+              Choose from {templates.length} templates &amp; guides to jumpstart your
+              workflow.
+            </p>
           <TemplateGrid templates={templates} />
         </div>
       </section>

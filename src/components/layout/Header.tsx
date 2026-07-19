@@ -23,6 +23,12 @@ export function Header() {
           >
             Categories
           </Link>
+          <Link
+            href="/guide"
+            className="text-sm font-medium text-gray-600 transition-colors hover:text-gray-900"
+          >
+            Guide
+          </Link>
         </nav>
         <div />
       </div>

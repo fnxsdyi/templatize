@@ -28,14 +28,16 @@ export function PricingCard({
     >
       <div className="mb-6">
         <div className="flex items-baseline gap-2">
-          <span className="text-4xl font-bold text-gray-900">${price}</span>
+          <span className="text-4xl font-bold text-gray-900">
+            {price === 0 ? "Free" : `$${price}`}
+          </span>
           {originalPrice && (
             <span className="text-lg text-gray-400 line-through">
               ${originalPrice}
             </span>
           )}
         </div>
-        <p className="mt-1 text-sm text-gray-500">一次购买，终身使用</p>
+        <p className="mt-1 text-sm text-gray-500">One-time purchase, lifetime updates</p>
       </div>
       {originalPrice && (
         <div className="mb-4 inline-block rounded-full bg-red-50 px-3 py-1 text-xs font-medium text-red-600">
@@ -64,7 +66,7 @@ export function PricingCard({
       </ul>
       <div className="mb-6 rounded-lg bg-gray-50 p-4">
         <p className="mb-2 text-xs font-medium uppercase tracking-wider text-gray-500">
-          包含内容
+          What&apos;s Included
         </p>
         <ul className="space-y-1.5">
           {(whatsIncluded || []).map((item, i) => (

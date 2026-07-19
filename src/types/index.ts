@@ -31,7 +31,8 @@ export type TemplateCategory =
   | "finance"
   | "saas"
   | "student"
-  | "habits";
+  | "habits"
+  | "guide";
 
 export interface CategoryInfo {
   id: TemplateCategory;

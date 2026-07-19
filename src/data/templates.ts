@@ -61,9 +61,46 @@ export const categories: CategoryInfo[] = [
     slug: "habits",
     description: "Atomic habit tracking + OKR goals — become your best self",
   },
+  {
+    id: "guide",
+    label: "Setup Guide",
+    slug: "guide",
+    description: "Free guides to help you set up and get the most from your templates",
+  },
 ];
 
 export const templates: Template[] = [
+  {
+    id: "tpl-000",
+    slug: "universal-installation-guide",
+    title: "Universal Installation Guide",
+    subtitle: "Set up any Templatize template in 5 minutes",
+    description:
+      "The free companion guide for every Templatize template. Learn how to duplicate a Notion template into your own workspace, navigate the free-trial button trap, and set up your system step by step — even if you have never used Notion before.",
+    price: 0,
+    category: "guide",
+    tags: ["Guide", "Setup", "Notion", "Beginner"],
+    features: [
+      "How to Duplicate a Template (step by step)",
+      "Avoiding the 'Free Trial' Ad Button Trap",
+      "First-Time Notion Setup Walkthrough",
+      "Troubleshooting: Login & Duplicate Issues",
+      "Tips to Customize Your Template",
+    ],
+    previewImages: [],
+    gumroadUrl: "https://valley-watchmaker-6f6.notion.site/Universal-Installation-Guide-3a15beac7ccd8039925bce0e4da9711c?source=copy_link",
+    notionUrl: "https://valley-watchmaker-6f6.notion.site/Universal-Installation-Guide-3a15beac7ccd8039925bce0e4da9711c?source=copy_link",
+    whatsIncluded: [
+      "1 Free Notion Guide (duplicate & use instantly)",
+      "Works with all 10 Templatize templates",
+      "Lifetime Free Updates",
+    ],
+    rating: 5.0,
+    reviewCount: 0,
+    author: "Templatize Studio",
+    publishDate: "2026-07-18",
+    updatedDate: "2026-07-18",
+  },
   {
     id: "tpl-001",
     slug: "ai-startup-kit",
@@ -84,7 +121,7 @@ export const templates: Template[] = [
     ],
     previewImages: ["/images/ai-kit-1.jpg", "/images/ai-kit-2.jpg", "/images/ai-kit-3.jpg"],
     gumroadUrl: "https://shoujiang.gumroad.com/l/smrreb",
-    notionUrl: "https://valley-watchmaker-6f6.notion.site/AI-Startup-Kit-3a15beac7ccd8057aa95d3bb42dafd18?source=copy_link",
+    notionUrl: "https://app.notion.com/p/AI-Startup-Kit-3a25beac7ccd80d8a9d9e4c48fea0895?source=copy_link",
     whatsIncluded: [
       "1 Notion Template (duplicate & use instantly)",
       "Setup Guide Included",
