@@ -11,12 +11,24 @@ export function Footer() {
             </div>
             <span className="text-sm font-medium text-gray-600">Templatize</span>
           </div>
-          <div className="flex items-center gap-6">
+          <div className="flex flex-wrap items-center justify-center gap-6 md:justify-end">
             <Link
               href="/guide"
               className="text-sm text-gray-400 transition-colors hover:text-gray-700"
             >
               How to Use Guide
+            </Link>
+            <Link
+              href="/privacy"
+              className="text-sm text-gray-400 transition-colors hover:text-gray-700"
+            >
+              Privacy
+            </Link>
+            <Link
+              href="/terms"
+              className="text-sm text-gray-400 transition-colors hover:text-gray-700"
+            >
+              Terms
             </Link>
             <p className="text-sm text-gray-400">
               © {new Date().getFullYear()} Templatize. All rights reserved.
